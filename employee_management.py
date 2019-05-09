@@ -40,5 +40,8 @@ main_json_dictionary = {
     'emp_games':emp_games_dict
 }
 
-with open('employee_info.txt','w') as myfile:
-    json.dump(main_json_dictionary,myfile)
+# with open('employee_info.txt','w') as myfile:
+#     json.dump(main_json_dictionary,myfile)
+with open('employee_info.txt') as myfile1:
+    empDataFile = json.load(myfile1)
+print(empDataFile)    
