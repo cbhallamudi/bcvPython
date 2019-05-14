@@ -19,6 +19,13 @@ emp_games_dict = {}
 for game in emp_games:
     emp_games_dict[game] = list(emp_games[game])
 
+main_json_dictionary = {
+    'emp_ids':list(emp_ids),
+    'game_ids':list(game_ids),
+    'emp_info':emp_info,
+    'emp_games':emp_games_dict
+}    
+
 
 # while True:
 #     get_action_id = input("Press 'addemp' to add employee \n Press 'getemp' to get employee \n Press 'add2game' to add employee to game \n Press 'fetgame' to fetch game info \n any 't' to terminate \n Enter your choice:  ")
@@ -33,15 +40,10 @@ for game in emp_games:
 #     elif get_action_id == 't':
 #         break
 
-main_json_dictionary = {
-    'emp_ids':list(emp_ids),
-    'game_ids':list(game_ids),
-    'emp_info':emp_info,
-    'emp_games':emp_games_dict
-}
+
 
 # with open('employee_info.txt','w') as myfile:
 #     json.dump(main_json_dictionary,myfile)
-with open('employee_info.txt') as myfile1:
-    empDataFile = json.load(myfile1)
-print(empDataFile)    
+# with open('employee_info.txt') as myfile1:
+#     empDataFile = json.load(myfile1)
+# print(empDataFile)    
