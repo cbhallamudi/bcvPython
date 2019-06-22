@@ -17,13 +17,7 @@ def getTables():
 def getTableData():
     
     tblName = input('Enter Table Name: ')
-    dbHandler.execute("SHOW TABLES")
-    
-    if tblName in dbHandler: 
-        dbHandler.execute('SELECT * FROM '+str(tblName))
-        myresult = dbHandler.fetchall()
-        for x in myresult:
-            print(x)
-    else:
-        print("No Such table exists")        
-        
+    dbHandler.execute('SELECT * FROM '+str(tblName))
+    myresult = dbHandler.fetchall()
+    for x in myresult:
+        print(x)
