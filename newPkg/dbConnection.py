@@ -14,6 +14,7 @@ def getTables():
     print("Tables in the Database: ")
     for x in dbHandler:
         print(x)
+
 def getTableData():
     
     tblName = input('Enter Table Name: ')
@@ -21,3 +22,14 @@ def getTableData():
     myresult = dbHandler.fetchall()
     for x in myresult:
         print(x)
+
+def insertTableData():
+        username = input("Enter User Name:\n")
+        password = input("Enter password:\n")
+        data = (username,password)        
+        dbHandler.execute('INSERT INTO `users`(name,password) VALUES(%s,%s)',data)
+        dbConnection.commit()
+
+        
+
+
